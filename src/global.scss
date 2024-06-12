@@ -1,0 +1,218 @@
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+#root,
+main {
+  width: 100%;
+  height: 100%;
+}
+
+header,
+footer {
+  background-color: #40122c;
+  padding: 5px 10px;
+  height: 5%;
+
+  @media screen and (max-width: $breakpoint-small) {
+    height: 6%;
+  }
+}
+
+.book,
+.book-about,
+section .search {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+section {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  @media screen and (max-width: $breakpoint-small) {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+}
+
+section .search {
+  justify-content: center;
+  gap: 30px;
+  width: 50%;
+  height: 100%;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 100%;
+  }
+}
+
+.search h1 {
+  font-size: 30px;
+  @media screen and (max-width: $breakpoint-small) {
+    font-size: 20px;
+    align-items: center;
+  }
+}
+
+.search input {
+  background-color: #7f7f7f2b;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  outline: none;
+  width: 80%;
+}
+
+.search button,
+.book-img div button {
+  background-color: #d8f171;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.search button:hover,
+.book-img div button:hover,
+.actions button {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.search,
+.container {
+  width: 50%;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 90%;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.book {
+  gap: 30px;
+  width: 100%;
+}
+
+.book p {
+  text-align: center;
+}
+
+.book-img div button:first-child {
+  background-color: #59baa9;
+}
+
+.book-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media screen and (max-width: $breakpoint-small) {
+    gap: 5px;
+  }
+}
+
+.book-img img {
+  width: 250px;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 150px;
+  }
+}
+
+.book-img div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-about {
+  width: 100%;
+
+  @media screen and (max-width: $breakpoint-small) {
+    h2 {
+      font-size: 18px;
+      align-items: center;
+    }
+  }
+}
+
+.slick-slider {
+  @media screen and (max-width: $breakpoint-small) {
+    width: 100%;
+  }
+}
+
+.slick-list {
+  width: 650px;
+  margin: 0 auto !important;
+  margin-right: 2px;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 90%;
+  }
+}
+
+.container .slick-prev:before,
+.container .slick-next:before {
+  color: #40122c;
+}
+
+.popup-content {
+  border-radius: 10px;
+  width: 450px;
+}
+
+.modal {
+  font-size: 12px;
+
+  .content {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 18px;
+  }
+
+  .actions {
+    width: 100%;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: flex-end;
+
+    > button {
+      background-color: #d8f171;
+      border: none;
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 16px;
+      outline: none;
+      cursor: pointer;
+      font-weight: 400;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
